@@ -18,8 +18,8 @@ export const getStaticProps: GetStaticProps<PageProps> = () => {
 export default function Index({ date, env }: PageProps) {
   return (
     <>
-      {date}
-      {env || "No env variable"}
+      <p>{date}</p>
+      <p>{env || "No env variable"}</p>
     </>
   );
 }
