@@ -2,17 +2,24 @@ import { GetStaticProps } from "next";
 
 export interface PageProps {
   date: number;
+  env: string | null;
 }
 
 export const getStaticProps: GetStaticProps<PageProps> = () => {
   return {
     props: {
       date: Date.now(),
+      env: process.env.NEXT_PUBLIC_TEST_ENV || null,
     },
     revalidate: 5,
   };
 };
 
-export default function Index({ date }: PageProps) {
-  return <p>{date}</p>;
+export default function Index({ date, env }: PageProps) {
+  return (
+    <>
+      {date}
+      {env || "No env variable"}
+    </>
+  );
 }
