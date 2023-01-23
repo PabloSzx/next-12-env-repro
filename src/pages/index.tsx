@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next";
+import { TEST_ENV } from "repro-next-13-env-issue";
 
 export interface PageProps {
   date: number;
@@ -9,7 +10,7 @@ export const getStaticProps: GetStaticProps<PageProps> = () => {
   return {
     props: {
       date: Date.now(),
-      env: process.env.NEXT_PUBLIC_TEST_ENV || null,
+      env: TEST_ENV,
     },
     revalidate: 5,
   };

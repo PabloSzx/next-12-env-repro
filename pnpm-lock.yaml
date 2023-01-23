@@ -7,6 +7,7 @@ specifiers:
   next: 12.3.4
   react: 17.0.2
   react-dom: 17.0.2
+  repro-next-13-env-issue: ^1.0.0
   typescript: 4.9.4
 
 dependencies:
@@ -16,6 +17,7 @@ dependencies:
   next: 12.3.4_sfoxds7t5ydpegc3knd667wn6m
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  repro-next-13-env-issue: 1.0.0
   typescript: 4.9.4
 
 packages:
@@ -278,6 +280,10 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
+    dev: false
+
+  /repro-next-13-env-issue/1.0.0:
+    resolution: {integrity: sha512-fIzfZzFmwrGkTElsqESMxtU10V5hea9DjYJmtc0NV6HYIN2EnwlPHfl4t8JQHWGgE5rRxIhNt/lvOR5z4Z7X/A==}
     dev: false
 
   /scheduler/0.20.2:
